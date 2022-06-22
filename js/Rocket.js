@@ -5,7 +5,7 @@ class Rocket {
 
     move() {
         this.pos = this.pos.add(this.vel);
-        if (this.pos.y >= height) {
+        if (this.pos.y >= height - 20) {
             rockets.splice(rockets.indexOf(this), 1);
             this.explode();
         }
@@ -36,10 +36,10 @@ class Rocket {
     }
 
     launch(force) {
-        this.applyForce(createVector(0, -0.05));
+        this.applyForce(createVector(0, -0.06));
         setTimeout(() => {
             this.isEngineOn = true;
-        }, 1200);
+        }, 800);
     }
 
     manageFuel() {

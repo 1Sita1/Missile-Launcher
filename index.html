@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boom!</title>
+    <title>ABC</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-
+    <audio src="sounds/music.mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
     <script src="js/Drawer.js"></script>
     <script src="js/Rocket.js"></script>
+    <script src="js/Ufo.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+        document.body.addEventListener("mousemove", () => {
+            const audio = document.getElementById("my_audio")
+            audio.volume = 0.01
+            audio.play()
+        })
+    </script>
 </body>
 </html>
